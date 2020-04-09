@@ -1,18 +1,19 @@
 /* Created By Kevin Estrada */
 
 body {
-    background: rgba(0,0,0,.9);
+    background: rgba(28, 1, 124,.9);
     margin: 0px;
     color: #fff;
     font-family: 'Open Sans', sans-serif;
 }
 
 .header::after {
-    content: '';
+    /* content: '';
     height: 100vh;
     width: 100%;
-    background-image: url(../img/kompaweb_1.png);
-    background-size: cover;
+    background-image: url(../img/kompaweb_1B.png);
+    background-size: cover; */
+    background-image: url(../img/El\ Kompa-logo__2.svg);
     background-repeat: no-repeat;
     background-position: center;
     display: block;

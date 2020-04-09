@@ -1,3 +1,5 @@
+/* Created By Kevin Estrada */
+
 body {
     background: rgba(0,0,0,.9);
     margin: 0px;
@@ -14,20 +16,20 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     display: block;
-    filter: blur(10px);
+    /* filter: blur(10px);
     -webkit-filter: blur(10px);
-    transition: all 1000ms;
+    transition: all 1000ms; */
 }
 
-.header:hover::after {
+/* .header:hover::after {
     filter: blur(0px);
     -webkit-filter: blur(0px);
-}
+} */
 
-.header:hover  .header-content{
+/* .header:hover  .header-content{
     filter: blur(0px);
     -webkit-filter: blur(0px);
-}
+} */
 
 .header-content {
     position: absolute;

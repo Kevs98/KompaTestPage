@@ -346,7 +346,17 @@ img.logojoin{
         font-size: 13px;
         color: rgba(74, 86, 96, 1);
     }
-  }
+    .contact form input, .contact form textarea {
+      font-family: 'Mukta Mahee', sans-serif;
+      font-weight: 200;
+      font-size: 14px;
+      width: 68%;
+      padding: .4em .8em;
+      background: rgba(249, 250, 250, .5);
+      border: 1px solid rgba(74, 86, 96, .1);
+      border-radius: 2.5px;
+      outline-color: #5dc3f2;
+    }
 }
 
 @media(max-height: 500px) {

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="css/join.css">
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+    <!-- FirebaseConfig -->
+    <!-- <script src="/firebase.js"></script> -->
+</head>
+<body>
+    <div class="bodyJ">
+        <div class="container">
+            <div class="wrapper animated bounceInLeft">
+            <div class="contact">
+                <div class="grid-2">
+                    <h3 class="contact-us textj">Unete a:</h3>
+                    <a href="index.html"><img src="/img/El Kompa-logo__2.svg" alt="Logo" class="logojoin"></a>
+                </div>
+                <div class="alert">Registrado!</div>
+                <form id="contactForm">
+                <p class="name-field">
+                    <label>Nombre Completo <span>*</span></label>
+                    <input type="text" name="name" id="name" required>
+                </p>
+                <p class="company-field">
+                    <label>Numero de Cédula<span>*</span></label>
+                    <input type="text" name="id" id="id" required>
+                </p>
+                <p class="email-field">
+                    <label>Copia de Identidad<span>*</span></label>
+                    <input type="file" accept=".png, .jpg, .jpeg" name="email" id="email" required>
+                </p>
+                <p class="test-field">
+                    <label>RTN<span>*</span></label>
+                    <input type="file" accept=".png, .jpg, .jpeg" name="RTN" id="RTN" required>
+                </p>
+                <p class="lic-field">
+                    <label>Copia de Licencia<span>*</span></label>
+                    <input type="file" accept=".png, .jpg, .jpeg" name="lic" id="lic" required>
+                </p>
+                <p class="rev-field">
+                    <label>Copia de Revisión<span>*</span></label>
+                    <input type="file" accept=".png, .jpg, .jpeg" name="rev" id="rev" required>
+                </p>
+                <p class="phone-field">
+                    <label>Telefono<span>*</span></label>
+                    <input type="text" name="phone" id="phone" required>
+                </p>
+                <p class="rec-field">
+                    <label>Recibo Publico<span>*</span></label>
+                    <input type="file" accept=".png, .jpg, .jpeg" name="rec" id="rec" required>
+                </p>
+                <p class="ref-field">
+                    <label>Referencias Personales<span>*</span></label>
+                    <textarea name="ref" id="ref" required></textarea>
+                </p>
+                <p class="kompa-field">
+                    <label>Kompa<span>*</span></label>
+                    <select name="kompas" id="kompas" required>
+                        <option value="1">Hogar</option>
+                        <option value="2">Vehiculos</option>
+                        <option value="3">Servicios Profesionales</option>
+                        <option value="4">VIP</option>
+                    </select>
+                </p>
+                <p class="required-field">Campos Obligatorios <span>*</span></p>
+                <p class="submit-button">
+                    <button type="submit">Enviar</button>
+                </p>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // Initialize Firebase
+var config = {
+    apiKey: "AIzaSyDxG2q7Sjc68ELyykVnNg4g-GmzmIGDTs8",
+    authDomain: "kompaform.firebaseapp.com",
+    databaseURL: "https://kompaform.firebaseio.com",
+    projectId: "kompaform",
+    storageBucket: "kompaform.appspot.com",
+    messagingSenderId: "197834565418",
+    appId: "1:197834565418:web:8fd10d1891e38056392053",
+    measurementId: "G-3787H5X8T8"
+  };
+  firebase.initializeApp(config);
+</script>
+<script>
+    // Reference test collection
+    var testref = firebase.database().ref('formulario');
+    
+    // Listen for form submit
+    document.getElementById('contactForm').addEventListener('submit', submitForm);
+    
+    // Submit form
+    function submitForm(e){
+        e.preventDefault();
+    
+        //Get value
+        var name = getInputVal('name');
+        var cedula = getInputVal('id');
+        var email = getInputVal('email');
+        var RTN = getInputVal('RTN');
+        var lic = getInputVal('lic');
+        var rev = getInputVal('rev');
+        var phone = getInputVal('phone');
+        var rec = getInputVal('rec');
+        var ref = getInputVal('ref');
+        var kompas = $("#kompas option:selected").text();
+        console.log(kompas);
+    
+        // Save message
+        saveMessage(name, cedula, email, RTN, lic, rev, phone, rec, ref, kompas);
+    
+        // Show alert
+        document.querySelector('.alert').style.display = 'block';
+    
+        // Hide alert after 3 seconds
+        setTimeout(function(){
+        document.querySelector('.alert').style.display = 'none';
+        },3000);
+    
+        // Clear form
+        document.getElementById('contactForm').reset();
+    }
+    
+    // Function to get form value
+    function getInputVal(id){
+        return document.getElementById(id).value;
+    }
+    
+    // Save message to firebase
+    function saveMessage(name, cedula, email, RTN, lic, rev, phone, rec, ref, kompas){
+        var newMessageRef = testref.push();
+        newMessageRef.set({
+        name: name,
+        cedula: cedula,
+        email: email,
+        RTN: RTN,
+        lic: lic,
+        rev: rev,
+        phone: phone,
+        rec: rec,
+        ref: ref,
+        kompas: kompas
+        });
+    }
+</script>
+</html>

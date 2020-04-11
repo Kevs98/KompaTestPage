@@ -462,13 +462,4 @@ img.logojoin{
           grid-area: kompa;
           grid-column: 1 / 1;
         }
-        select#kompas {
-          width: 565px;
-          height: 31px;
-          margin: 0;
-            font-family: 'Mukta Mahee', sans-serif;
-            font-weight: 200;
-            font-size: 13px;
-            color: rgba(74, 86, 96, 1);
-        }
 }

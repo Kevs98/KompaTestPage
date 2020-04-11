@@ -121,7 +121,8 @@ footer p {
     .textT {
         line-height: 1.7;
         margin-top: 9px;
-        font-size: 12px;
+        font-weight: bolder;
+        font-size: 13px;
     }
 
     img.d-block.w-100 {
@@ -177,6 +178,7 @@ footer p {
     .textT {
         line-height: 1.7;
         margin-top: -20px;
+        font-weight: bolder;
         font-size: 13px;
     }
     .titleS {

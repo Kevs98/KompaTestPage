@@ -117,8 +117,8 @@ button.btn.btn-danger {
     }
     .download {
         /* width: 95%; */
-        display: -webkit-box;
-        transform: translateX(-5px);
+        /* display: -webkit-box; */
+        transform: translateX(35px);
         /* transform: translateY(113px); */
         margin-top: 120px;
     }

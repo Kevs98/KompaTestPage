@@ -1,228 +1,138 @@
-/* Created By Kevin Estrada */
-
-body {
-    background: rgb(18, 18, 105);
-    margin: 0px;
-    color: #fff;
-    font-family: 'Open Sans', sans-serif;
+html, body {
+    margin: 0;
+    padding: 0;
 }
 
-.header::after {
-    /* content: '';
-    height: 100vh;
-    width: 100%;
-    background-image: url(../img/kompaweb_1B.png);
-    background-size: cover; */
-    background-image: url(../img/El\ Kompa-logo__2.svg);
+body { 
+    background-image: url(../img/base1-HD_horizontal.png);
     background-repeat: no-repeat;
-    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.main{
+    /* background-image: url(../img//base1-HD_horizontal.png);
+    width: 100vw;
+    height: 100vh;
+    position: absolute; */
+}
+.logo {
+    width: 30%;
     display: block;
-    /* filter: blur(10px);
-    -webkit-filter: blur(10px);
-    transition: all 1000ms; */
+    margin: auto;
+}
+img {
+    margin-top: 120px;
+}
+a.btn.btn-primary{
+    display: block;
+    margin: auto;
+    background: transparent;
+    border-color: white;
+    font-size: 25px;
+    margin-top: 50px;
+    width: 130px;
 }
 
-/* .header:hover::after {
-    filter: blur(0px);
-    -webkit-filter: blur(0px);
-} */
-
-/* .header:hover  .header-content{
-    filter: blur(0px);
-    -webkit-filter: blur(0px);
-} */
-
-button.btn.btn-primary {
-    background-color: rgba(0, 0, 102, 1);
-    border-color: rgba(0, 0, 102, 1);
+button.btn.btn-danger {
+    width: 165px;
+    height: 60px;
+    display: block;
+    margin: auto;
+    background: transparent;
+    border-color: white;
+    font-size: 14px;
+    margin-top: 50px;
+    margin-right: 10px;
+}
+.download {
+    display: inline-flex;
+    transform: translateX(600px);
+    margin-top: 50px;
 }
 
-.header-content {
-    position: absolute;
-    z-index: 1;
-    top: 10%;
-    left: 50%;
-    margin-top: 105px;
-    margin-left: -145px;
-    text-align: center;
-    width: 300px;
-    height: 350px;
-    transition:  all 1000ms;
+.store {
+    font-size: 18px;
+    font-weight: 500;
 }
 
-.header-content .logo {
-    margin-top: -65px;
-    height: 200px;
-    width: 300px;
-    margin-bottom: -45px;
-}
-
-.title {
-    font-family: 'Oswald', sans-serif;
-    font-size: 2rem;    
-}
-.titleS {
-    font-family: 'Oswald', sans-serif;
-    font-size: 2rem; 
-    margin-bottom: -20px;   
-}
-
-.text {
-    line-height: 1.7;
-    margin-top: 1rem;
-}
-
-.textT {
-    line-height: 1.7;
-    margin-top: 1rem;
-    font-size: 20px;
+.mdi-36px {
+    font-size: 39px;
+    margin-right: 10px
 }
 
 .container {
-    max-width: 960px;
-    margin: auto;
-    overflow: hidden;
-    padding: 4rem 1rem;
+    margin-top: 150px
 }
 
-.grid-3 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
+.font-weight-light {
+    font-weight: 300!important;
+    font-size: 13px;
 }
 
-.text-center {
+.appstore {
+    font-size: 19px;
+    margin-top: 0;
+    font-weight: 400;
+}
+
+.playstore {
+    font-size: 16px;
+    margin-top: 0;
+    font-weight: 400;
+}
+
+.avlb {
     text-align: center;
-    margin: auto;
+    color: white;
+    transform: translateY(100px);
 }
 
-.footer {
-    padding: 2.2rem;
+.text {
+    text-align: center;
+    color: white;
+    margin-top: 30px;
 }
 
-footer p {
-    margin: 0px;
+.social {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    margin-top: -10px;
 }
 
-.services {
-    padding: 2rem 0;
-}
-
-.bg-light {
-    background: #FFF;
-    color: #333;
-}
-@media(max-width: 560px) {
-    .header::after {
-        height: 60vh;
-        
+ /* Para iPhone 5 o superior */
+ @media (max-width:768px){
+    body { 
+        background-image: url(../img/base1-HD_horizontal.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
     }
 
-    .textT {
-        line-height: 1.7;
-        margin-top: 9px;
-        font-weight: bolder;
+    .avlb {
+        text-align: center;
+        color: white;
+        transform: translateY(160px);
+        font-size: 16px;
+    }
+    .download {
+        /* width: 95%; */
+        display: -webkit-box;
+        transform: translateX(-5px);
+        /* transform: translateY(113px); */
+        margin-top: 120px;
+    }
+    .text {
+        text-align: center;
+        color: white;
+        margin-top: 30px;
         font-size: 13px;
     }
 
-    img.d-block.w-100 {
-        height: 182px;
+    .logo {
+        width: 60%;
+        display: block;
+        margin: auto;
     }
-
-    .header-content {
-        top: 5%;
-        margin-top: 5px;
-    }
-    .header-content .text {
-        display: none;
-    }
-
-    .header-content .title {
-      font-size: 16px;  
-    }
-
-    button.btn.btn-primary {
-        margin-top: -7px;
-    }
-
-    .header-content .logo {
-        width: 153px;
-        height: 66px;
-    }
-    .grid-3 {
-        grid-template-columns: 1fr;
-    }
-
-    .services {
-        padding: 1rem 1rem;
-    }
-}
-
-@media(max-height: 500px) {
-    .header-content .text {
-        display: none;
-    }
-    .header-content {
-        top: 0;
-    }
-    .header-content .logo {
-        margin-top: -130px;
-        width: 153px;
-        height: 66px;
-        
-    }
-    .header-content .title {
-        font-size: 16px;  
-    }
-    
-    .textT {
-        line-height: 1.7;
-        margin-top: -20px;
-        font-weight: bolder;
-        font-size: 13px;
-    }
-    .titleS {
-        font-family: 'Oswald', sans-serif;
-        font-size: 2rem; 
-        margin-bottom: -20px;   
-    }
-    @media (min-width: 500px) {
-        #contactForm {
-          grid-template-columns: 1fr 1fr;
-          grid-template-areas:
-            'name company'
-            'email phone'
-            'message message';
-        }
-      
-        .name-field {
-          grid-area: name;
-          grid-column: 1 / 2;
-        }
-      
-        .email-field {
-          grid-area: email;
-          grid-column: 1 / 2;
-        }
-      
-        .company-field {
-          grid-area: company;
-          grid-column: 2 / 3;
-        }
-      
-        .phone-field {
-          grid-area: phone;
-          grid-column: 2 / 3;
-        }
-      
-        .message-field {
-          grid-area: message;
-          grid-column: 1 / 3;
-        }
-        /* .test-field {
-            grid-area: test;
-            grid-column: 1 / 3;
-          } */
-      }
-      
+	
 }

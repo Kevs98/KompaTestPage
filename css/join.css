@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Mukta+Mahee:200,400');
 
 body { 
-    background-image: url(../img/kompaweb_1B.png);
+    background-image: url(../img/base1-HD_horizontal.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -225,6 +225,10 @@ img.logojoin{
     .header::after {
         height: 60vh;
         
+    }
+
+    body {
+      background-image: url(../img/base1-HD_vertical.png);
     }
 
     .textT {

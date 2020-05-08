@@ -1,5 +1,6 @@
 export const environment = {
   production: true,
+  // Firebase Prod
   firebase: {
     apiKey: "AIzaSyDxG2q7Sjc68ELyykVnNg4g-GmzmIGDTs8",
     authDomain: "kompaform.firebaseapp.com",
